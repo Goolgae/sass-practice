@@ -1,7 +1,7 @@
 import React from 'react';
 import './Button.scss';
 
-fuction Button({ children }) {
+function Button({ children }) {
     return <button className="Button">{children}</button>
 }
 
