@@ -14,6 +14,15 @@ $pink: #f06595;
   &:active {
     background: darken($color, 10%);
   }
+  &.outline {
+    color: $color;
+    background: none;
+    border: 1px solid $color;
+    &:hover {
+      background: $color;
+      color: white;
+    }
+  }
 }
 
 .Button {
@@ -35,7 +44,6 @@ $pink: #f06595;
   &.gray {
     @include button-color($gray);
   }
-
   &.pink {
     @include button-color($pink);
   }
@@ -43,6 +51,16 @@ $pink: #f06595;
   & + & {
     margin-left: 1rem;
   }
+
+  &.fullWidth {
+    width: 100%;
+    justify-content: center;
+    & + & {
+      margin-left: 0;
+      margin-top: 1rem;
+    }
+  }
+
   &.large {
     height: 3rem;
     font-size: 1.25rem;
