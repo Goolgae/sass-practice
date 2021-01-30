@@ -5,7 +5,7 @@ import './Button.scss';
 
 //size: large, medium, small
 function Button({ children, size }) {
-    return <button className={ classNames('Buttons', size) }>{children}</button>
+    return <button className={ classNames('Button', size) }>{children}</button>
 }
 
 Button.defaultProps = {
