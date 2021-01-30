@@ -6,6 +6,16 @@ $blue: #228be6;
 $gray: #495057;
 $pink: #f06595;
 
+@mixin button-color($color) {
+  background-color: $color;
+  &:hover {
+    background: lighten($color, 10%);
+  }
+  &:active {
+    background: darken($color, 10%);
+  }
+}
+
 .Button {
   display: inline-flex;
   align-items: center;
@@ -19,32 +29,15 @@ $pink: #f06595;
   padding-left: 1rem;
   padding-right: 1rem;
   background: $blue;
-
   &.blue {
-    &:hover {
-      background: lighten($blue, 10%);
-    }
-    &:active {
-      background: darken($blue, 10%);
-    }
+    @include button-color($blue);
   }
-
   &.gray {
-    &:hover {
-      background: lighten($gray, 10%);
-    }
-    &:active {
-      background: darken($gray, 10%);
-    }
+    @include button-color($gray);
   }
 
   &.pink {
-    &:hover {
-      background: lighten($pink, 10%);
-    }
-    &:active {
-      background: darken($pink, 10%);
-    }
+    @include button-color($pink);
   }
 
   & + & {
